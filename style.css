@@ -1,0 +1,149 @@
+:root {
+    --black-text-color: rgb(23, 22, 22);
+    --gray-text-color: rgba(23, 22, 22, 0.68);
+    --container-color: #fff;
+    --background-color: rgba(23, 22, 22, 0.07);
+    --button-color: rgb(153, 102, 255);
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    background-color: var(--background-color);
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background-color: var(--container-color);
+
+    padding: 3rem;  /****/
+
+    border-radius: 1.3rem;
+    border-bottom-right-radius: 7.5rem;
+    position: relative;
+}
+
+.container form {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    padding-right: 7.5rem; 
+    border-bottom: 1.2px solid var(--gray-text-color);
+}
+
+.container form .area {
+    display: flex;
+    flex-direction: column;
+    color: var(--gray-text-color);
+    gap: .5rem;
+}
+
+.container form .area label {
+    letter-spacing: 1.8px;
+}
+
+.container form .area input {
+    width: 9rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 1.3px solid var(--gray-text-color);
+    outline-color: var(--button-color);
+}
+
+.container form .area input::-webkit-outer-spin-button,
+.container form .area input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.container form .area span { 
+    color: crimson;
+    font-weight: 300;
+    font-style: italic;
+    font-size: .85rem;
+
+    position: absolute;
+    top: 25.5%;
+}
+
+.arrow {
+    position: absolute;
+    top: 26.5%;
+    right: 6.7%;
+
+    border-radius: 50%;
+
+    background: var(--button-color);
+    border: none;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background: var(--black-text-color);
+    transition: .3s
+
+}
+
+.arrow-image {
+    padding: .7rem;
+    transform: scale(.7);
+}
+
+.result {
+    margin-top: 3rem;
+    font-size: 2.1rem;
+}
+
+.result h1 {
+    font-weight: 900;
+}
+
+.result span {
+    color: var(--button-color);
+}
+
+
+
+@media (max-width: 48rem) {
+    .container {
+        max-width: 28rem;
+    }
+
+    .container form {
+        gap: 1rem;
+        margin-right: -.5rem;
+        padding-left: 1.2rem;
+    }
+
+    .arrow {
+        right: 41%;
+        top: 29.2%;
+    }
+
+
+    .container form .area input {
+        width: 6rem;
+        font-size: 1.2rem;
+    }
+
+    .result {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        display: grid;
+        place-content: center;
+    }
+} 
